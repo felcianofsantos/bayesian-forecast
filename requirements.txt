@@ -54,6 +54,8 @@ pytz==2017.2              # via matplotlib, pandas
 pyzmq==16.0.2             # via jupyter-client
 qtconsole==4.3.1          # via jupyter
 seaborn==0.8.1
+keras==2.1.1
+pyyaml==3.12
 simplegeneric==0.8.1      # via ipython
 six==1.10.0
 tensorflow-tensorboard==0.1.6  # via tensorflow

@@ -11,10 +11,11 @@ from keras.layers.normalization import BatchNormalization
 from keras.layers import Activation
 from keras.models import model_from_yaml
 from keras.models import load_model
+from tensorflow import round as tf_round
 import keras.backend as K
 
 def mean_pred(y_true, y_pred):
-    return K.mean(tf.round(y_pred))
+    return K.mean(tf_round(y_pred))
 
 def conv_lstm(features=5):
     model = Sequential()
