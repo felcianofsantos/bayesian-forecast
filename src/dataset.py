@@ -139,7 +139,7 @@ class DataSet:
     def training_by_era(self, eras, balance=True):
         training_era = self.training_data[self.training_data['era'].isin(eras)]
         if balance:
-            training_era = self._balance(training_era)
+            training_era = self._balance(training_era).dropna()
         features = [f for f in list(self.training_data.columns) if "feature" in f]
         X_era = training_era[features].values
 
