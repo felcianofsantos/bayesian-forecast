@@ -113,11 +113,10 @@ class DataSet:
 
     def _print_shapes(self):
         print('Shapes:')
-        print('X_train:', self.X_train.shape)
-        print('training_data', self.training_data.shape)
-        print(self.training_data.columns)
-
-        print('x_prediction:', self.x_prediction.shape)
+        print('X_data:', self.X_train.shape)
+        # print('training_data', self.training_data.shape)
+        # print(self.training_data.columns)
+        print('x_test:', self.x_prediction.shape)
 
     def _preprocess(self, X):
         if self.center:

@@ -76,7 +76,7 @@ def visualize_data_fit(X, y, β, α, title_prefix, n_samples=10):
     ax = plt.axes(projection='3d')
     ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=y, alpha=.1)
 
-    plt.title(f'{title_prefix} Parameter Samples vs. Observed Data')
+    # plt.title(f'{title_prefix} Parameter Samples vs. Observed Data')
 
     # plot lines defined by parameter samples
     inputs = np.linspace(X.min(), X.max(), num=500)
