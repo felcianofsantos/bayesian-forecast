@@ -36,7 +36,7 @@ class IWVI(VariationalInference):
     """
 
     def __init__(self, *args, **kwargs):
-        super(IWVI, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def initialize(self, K=5, *args, **kwargs):
         """Initialization.
@@ -47,7 +47,7 @@ class IWVI(VariationalInference):
           Number of importance samples.
         """
         self.K = K
-        return super(IWVI, self).initialize(*args, **kwargs)
+        return super().initialize(*args, **kwargs)
 
     def build_loss_and_gradients(self, var_list):
         """Build loss function. Its automatic differentiation
