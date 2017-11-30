@@ -14,16 +14,15 @@ def get_toy_dataset(N, D):
 
 def get_dataset(N=None, D=None, make_balanced=False):
     dat = pd.read_csv("../data/train-1.csv", nrows=N)
-       
-    
+
     if make_balanced:
-        dat1 = dat[dat['target']==1].reset_index(drop=True)
-        dat0 = dat[dat['target']==0].reset_index(drop=True)
-        if len(dat0)>len(dat1):
-            dat0 = dat0.ix[:len(dat1)-1]
+        dat1 = dat[dat['target'] == 1].reset_index(drop=True)
+        dat0 = dat[dat['target'] == 0].reset_index(drop=True)
+        if len(dat0) > len(dat1):
+            dat0 = dat0.ix[:len(dat1) - 1]
         else:
-            dat1 = dat1.ix[:len(dat0)-1]
-        dat = pd.concat([dat0,dat1]).reset_index(drop=True)
+            dat1 = dat1.ix[:len(dat0) - 1]
+        dat = pd.concat([dat0, dat1]).reset_index(drop=True)
 
     X_data = dat[[col for col in dat.columns if 'feature' in col]]
 
@@ -44,7 +43,6 @@ def get_dataset(N=None, D=None, make_balanced=False):
 
     y_test = datt['target'].values
 
-    
     return X_data, y_data, X_test, y_test
 
 
